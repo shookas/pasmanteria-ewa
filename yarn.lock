@@ -4125,6 +4125,10 @@ jest@20.0.4:
   dependencies:
     jest-cli "^20.0.4"
 
+jquery@1.11.3:
+  version "1.11.3"
+  resolved "http://91.227.21.66:8081/repository/npm-group/jquery/-/jquery-1.11.3.tgz#dd8b74278b27102d29df63eae28308a8cfa1b583"
+
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.5"
   resolved "http://91.227.21.66:8081/repository/npm-group/js-base64/-/js-base64-2.4.5.tgz#e293cd3c7c82f070d700fc7a1ca0a2e69f101f92"
