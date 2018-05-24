@@ -1,13 +1,14 @@
 import React, { Component, ReactDOM } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Header.scss';
 
 class Header extends Component {
-
   componentDidMount() {
     require('../libs/jquery.scrolly.min.js');
-     // Scrolly links.
-     const $ = window.$;
-     $('.scrolly').scrolly();
+    // Scrolly links.
+    const $ = window.$;
+    $('.scrolly').scrolly();
   }
 
   render() {
@@ -35,10 +36,10 @@ class Header extends Component {
         <nav id="nav">
           <ul>
             <li>
-              <a href="index.html">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">Dropdown</a>
+              <a href="#">Oferta</a>
               <ul>
                 <li>
                   <a href="#">Lorem ipsum dolor</a>
@@ -72,13 +73,7 @@ class Header extends Component {
               </ul>
             </li>
             <li>
-              <a href="left-sidebar.html">Left Sidebar</a>
-            </li>
-            <li>
-              <a href="right-sidebar.html">Right Sidebar</a>
-            </li>
-            <li>
-              <a href="no-sidebar.html">No Sidebar</a>
+              <Link to="/contact">Kontakt</Link>
             </li>
           </ul>
         </nav>

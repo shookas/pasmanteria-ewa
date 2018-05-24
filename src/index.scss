@@ -13,3 +13,114 @@ header {
 footer {
   margin: 2.5em 0 0 0;
 }
+
+/* Form */
+
+form {
+  label {
+    display: block;
+    font-weight: 400;
+    color: #483949;
+    margin: 0 0 1em 0;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  select,
+  textarea {
+    -webkit-appearance: none;
+    display: block;
+    border: 0;
+    background: #fafafa;
+    width: 100%;
+    border-radius: 0.5em;
+    border: solid 1px #e5e5e5;
+    padding: 1em;
+    transition-property: background-color, border-color;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    
+    &:focus {
+      background: #fff;
+      border-color: #df7366;
+    }
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  select {
+    line-height: 1em;
+  }
+
+  textarea {
+    min-height: 9em;
+  }
+
+  .formerize-placeholder {
+    color: #555 !important;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #555 !important;
+  }
+
+  :-moz-placeholder {
+    color: #555 !important;
+  }
+
+  ::-moz-placeholder {
+    color: #555 !important;
+  }
+
+  :-ms-input-placeholder {
+    color: #555 !important;
+  }
+
+  ::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+/* Table */
+
+table {
+  width: 100%;
+
+  &.default {
+    width: 100%;
+
+    tbody {
+      tr {
+        border-top: solid 1px #e5e5e5;
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        &:nth-child(2n + 1) {
+          background: #fafafa;
+        }
+      }
+    }
+
+    td {
+      padding: 0.5em 1em 0.5em 1em;
+    }
+
+    th {
+      text-align: left;
+      font-weight: 400;
+      padding: 0.5em 1em 0.5em 1em;
+    }
+
+    thead {
+      border-bottom: solid 2px #e5e5e5;
+    }
+
+    tfoot {
+      border-top: solid 2px #e5e5e5;
+    }
+  }
+}

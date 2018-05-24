@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import PageMain from './PageMain/PageMain';
+import PageContact from './PageContact/PageContact';
 import Header from './Header/Header';
-import Baner from './Baner/Baner';
-import Carousel from './Carousel/Carousel';
-import Main from './Main/Main';
-import Features from './Features/Features';
 import Footer from './Footer/Footer';
-import logo from './logo.svg';
 import './App.scss';
 
 import jQuery from 'jquery';
 window.$ = window.jQuery = jQuery;
 
 class App extends Component {
+
   componentDidMount() {
     require('./libs/jquery.dropotron.min.js');
 
@@ -73,14 +73,14 @@ class App extends Component {
 
   render() {
     return (
-      <div id="page-wrapper">
-        <Header />
-        <Baner />
-        <Carousel />
-        <Main />
-        <Features />
-        <Footer />
-      </div>
+      <Router>
+        <div id="page-wrapper">
+          <Header />
+          <Route exact path="/" component={PageMain} />
+          <Route path="/contact" component={PageContact} />
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
