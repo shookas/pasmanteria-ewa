@@ -14,10 +14,61 @@ window.$ = window.jQuery = jQuery;
 class App extends Component {
   componentDidMount() {
     require('./libs/jquery.dropotron.min.js');
-    require('./libs/jquery.scrolly.min.js');
-    require('./libs/jquery.onvisible.min.js');
+
     require('./libs/util.js');
-    require('./libs/main.js');
+
+    (function($) {
+      $(function() {
+        const $window = $(window);
+        const $body = $('body');
+
+        // Disable animations/transitions until the page has loaded.
+        $body.addClass('is-loading');
+
+        $window.on('load', function() {
+          $body.removeClass('is-loading');
+        });
+
+        // Fix: Placeholder polyfill.
+        $('form').placeholder();
+
+        // Dropdowns.
+        $('#nav > ul').dropotron({
+          mode: 'fade',
+          speed: 350,
+          noOpenerFade: true,
+          alignment: 'center'
+        });
+
+        // Off-Canvas Navigation.
+
+        // Navigation Button.
+        $(
+          '<div id="navButton">' +
+            '<a href="#navPanel" class="toggle"></a>' +
+            '</div>'
+        ).appendTo($body);
+
+        // Navigation Panel.
+        $(
+          '<div id="navPanel">' +
+            '<nav>' +
+            $('#nav').navList() +
+            '</nav>' +
+            '</div>'
+        )
+          .appendTo($body)
+          .panel({
+            delay: 500,
+            hideOnClick: true,
+            hideOnSwipe: true,
+            resetScroll: true,
+            resetForms: true,
+            target: $body,
+            visibleClass: 'navPanel-visible'
+          });
+      });
+    })(window.jQuery);
   }
 
   render() {
@@ -29,10 +80,6 @@ class App extends Component {
         <Main />
         <Features />
         <Footer />
-       
-
-        {/* // Footer */}
-        
       </div>
     );
   }
