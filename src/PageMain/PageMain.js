@@ -8,7 +8,7 @@ import Features from '../Features/Features';
 
 class PageMain extends Component {
   constructor(props) {
-    super(props);
+    super();
   }
 
   render() {

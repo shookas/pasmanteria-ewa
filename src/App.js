@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import PageMain from './PageMain/PageMain';
 import PageContact from './PageContact/PageContact';
@@ -12,7 +12,7 @@ window.$ = window.jQuery = jQuery;
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super();
   }
 
   componentDidMount() {

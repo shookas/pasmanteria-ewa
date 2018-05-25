@@ -354,3 +354,10 @@
     }
   }
 }
+
+// Alert box producer
+@mixin alert($color) {
+  color: $color;
+  background-color: lighten($color, 40%);
+  border-color: lighten($color, 20%);
+}

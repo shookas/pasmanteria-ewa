@@ -30,10 +30,6 @@
 				$body.removeClass('is-loading');
 			});
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-
 		// Dropdowns.
 			$('#nav > ul').dropotron({
 				mode: 'fade',
