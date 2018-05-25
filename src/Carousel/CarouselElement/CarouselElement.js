@@ -18,7 +18,7 @@ export default class CarouselElement extends Component {
         </a>
         <header>
           <h3>
-            <Link to="/offer">{this.props.header}</Link>
+            <Link to="/oferta">{this.props.header}</Link>
           </h3>
         </header>
         <p>{this.props.text}</p>

@@ -12,7 +12,7 @@ class Baner extends Component {
           </h2>
           <p>
             Zachęcamy do zapoznania się z naszą ofertą {' '}
-            <Link to="/offer">OFERTĄ</Link>. <br></br>
+            <Link to="/oferta">OFERTĄ</Link>. <br></br>
             Posiadamy duży asortyment i na pewno znajdziesz coś dla siebie.
           </p>
         </header>

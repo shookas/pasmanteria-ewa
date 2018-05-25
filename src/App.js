@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import PageMain from './PageMain/PageMain';
 import PageContact from './PageContact/PageContact';
+import PageOffer from './PageOffer/PageOffer';
 import Header from './Header/Header';
+import TopMenu from './TopMenu/TopMenu';
 import Footer from './Footer/Footer';
 import './App.scss';
 
@@ -75,17 +77,27 @@ class App extends Component {
   }
 
   giveMeProps() {
-    return {a: 'a'};
+    return { a: 'a' };
   }
 
   render() {
     return (
       <Router>
         <div id="page-wrapper">
-          <Header />
-          <Route exact path="/" render={() => <PageMain config={this.props.config.mainPageConfig} />} />
-          <Route path="/contact" component={PageContact} />
-          <Footer config={this.props.config.footerConfig}/>
+          <div id="header">
+            <TopMenu />
+            <Header />
+          </div>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <PageMain config={this.props.config.mainPageConfig} />
+            )}
+          />
+          <Route path="/oferta" component={PageOffer} />
+          <Route path="/kontakt" component={PageContact} />
+          <Footer config={this.props.config.footerConfig} />
         </div>
       </Router>
     );

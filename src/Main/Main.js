@@ -33,7 +33,7 @@ class Main extends Component {
             bawełniane chusteczki na głowę oraz parea na stroje kąpielowe.
           </p>
           <footer>
-            <Link to="/contact" className="button">
+            <Link to="/kontakt" className="button">
               Kontakt
             </Link>
           </footer>
