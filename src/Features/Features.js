@@ -7,59 +7,48 @@ class Features extends Component {
       <div className="wrapper style1">
         <section id="features" className="container special">
           <header>
-            <h2>Morbi ullamcorper et varius leo lacus</h2>
-            <p>
-              Ipsum volutpat consectetur orci metus consequat imperdiet duis
-              integer semper magna.
-            </p>
+            <h2>Czym się zajmujemy?</h2>
+            <p>Zapraszamy do zapoznania się z naszymi usługami</p>
           </header>
           <div className="row">
             <article className="4u 12u(mobile) special">
-              <a href="#" className="image featured">
+              <a className="image featured">
                 <img src="images/pic07.jpg" alt="" />
               </a>
               <header>
                 <h3>
-                  <a href="#">Gravida aliquam penatibus</a>
+                  <a >Artykuły pasmanteryjne</a>
                 </h3>
               </header>
               <p>
-                Amet nullam fringilla nibh nulla convallis tique ante proin
-                sociis accumsan lobortis. Auctor etiam porttitor phasellus
-                tempus cubilia ultrices tempor sagittis. Nisl fermentum
-                consequat integer interdum.
+                Szeroki asortyment artykułów pasmanteryjnych dostosowany do potrzeb naszych klientów.
               </p>
             </article>
             <article className="4u 12u(mobile) special">
-              <a href="#" className="image featured">
+              <a className="image featured">
                 <img src="images/pic08.jpg" alt="" />
               </a>
               <header>
                 <h3>
-                  <a href="#">Sed quis rhoncus placerat</a>
+                  <a>Artykuły sezownowe</a>
                 </h3>
               </header>
               <p>
-                Amet nullam fringilla nibh nulla convallis tique ante proin
-                sociis accumsan lobortis. Auctor etiam porttitor phasellus
-                tempus cubilia ultrices tempor sagittis. Nisl fermentum
-                consequat integer interdum.
+                Sprzedajemy także artykuły sezonowe renomowanych marek.
               </p>
             </article>
             <article className="4u 12u(mobile) special">
-              <a href="#" className="image featured">
+              <a className="image featured">
                 <img src="images/pic09.jpg" alt="" />
               </a>
               <header>
                 <h3>
-                  <a href="#">Magna laoreet et aliquam</a>
+                  <a>Punkt przyjęć czyszczenia odzieży</a>
                 </h3>
               </header>
               <p>
-                Amet nullam fringilla nibh nulla convallis tique ante proin
-                sociis accumsan lobortis. Auctor etiam porttitor phasellus
-                tempus cubilia ultrices tempor sagittis. Nisl fermentum
-                consequat integer interdum.
+                Czyścimy odzież, kurtki letnie i zimowe, kołdry, koce, bieżniki
+                oraz kurtki skórzane.
               </p>
             </article>
           </div>

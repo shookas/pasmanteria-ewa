@@ -19,15 +19,15 @@ class Header extends Component {
           <header>
             <h1>
               <a href="index.html" id="logo">
-                Helios
+                Pasmanteria Ewa (Logo)
               </a>
             </h1>
             <hr />
-            <p>Another fine freebie by HTML5 UP</p>
+            <p>U nas znajdziesz czego potrzebujesz</p>
           </header>
           <footer>
             <a href="#banner" className="button circled scrolly">
-              Start
+              <i className="icon fa-angle-double-down fa-2x"></i>  
             </a>
           </footer>
         </div>

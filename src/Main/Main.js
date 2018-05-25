@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Main.scss';
 
 class Main extends Component {
@@ -6,37 +7,35 @@ class Main extends Component {
     return (
       <div className="wrapper style2">
         <article id="main" className="container special">
-          <a href="#" className="image featured">
-            <img src="images/pic06.jpg" alt="" />
-          </a>
+            <img className="image featured" src="images/pic06.jpg" alt="" />
           <header>
             <h2>
-              <a href="#">Sed massa imperdiet magnis</a>
+              <a>Pasmanteria Ewa</a>
             </h2>
             <p>
-              Sociis aenean eu aenean mollis mollis facilisis primis ornare
-              penatibus aenean. Cursus ac enim pulvinar curabitur morbi
-              convallis. Lectus malesuada sed fermentum dolore amet.
+              Firma Pasmanteria Ewa jest małą ale prężną firmą rodzinną
+              działającą od 1997 roku niezmiennie w tym samym miejscu w Poznaniu
+              na ulicy Głogowskiej 67. Między Parkiem Wilsona a Rynkiem
+              Łazarskim.
             </p>
+            <p>Czynne w godzinach 10:00 - 18:00 i każdą sobotę od 10:00 do 14:00.</p>
           </header>
           <p>
-            Commodo id natoque malesuada sollicitudin elit suscipit. Curae
-            suspendisse mauris posuere accumsan massa posuere lacus convallis
-            tellus interdum. Amet nullam fringilla nibh nulla convallis ut
-            venenatis purus sit arcu sociis. Nunc fermentum adipiscing tempor
-            cursus nascetur adipiscing adipiscing. Primis aliquam mus lacinia
-            lobortis phasellus suscipit. Fermentum lobortis non tristique ante
-            proin sociis accumsan lobortis. Auctor etiam porttitor phasellus
-            tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat
-            integer interdum integer purus sapien. Nibh eleifend nulla nascetur
-            pharetra commodo mi augue interdum tellus. Ornare cursus augue
-            feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-            natoque aenean scelerisque.
+            Oferujemy cały zakres dodatków krawieckich, przyborów do szycia,
+            haftowania, przeróbek, naprawy odzieży. Gwarantujemy miłą i fachową
+            obsługę i zawsze chętnie doradzimy i wykonamy bezpłatnie drobne
+            naprawy np. wymiana suwaków w zamkach do kurtek, torebek itp.
+          </p>
+          <p>
+            Ponadto oferujemy również sprzedaż polskich parasoli firmy "Kulik" z
+            Wrocławia z roczną gwarancją. W sezonie zimowym duży wybór beretów,
+            czapek, rękawiczek i szali, natomiast wiosną i latem cienkie szale,
+            bawełniane chusteczki na głowę oraz parea na stroje kąpielowe.
           </p>
           <footer>
-            <a href="#" className="button">
-              Continue Reading
-            </a>
+            <Link to="/contact" className="button">
+              Kontakt
+            </Link>
           </footer>
         </article>
       </div>
