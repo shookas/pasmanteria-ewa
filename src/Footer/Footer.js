@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import './Footer.scss';
 
 import FooterGallery from './FooterGallery/FooterGallery';
+import FooterOpinions from './FooterOpinions/FooterOpinions';
 
 class Footer extends Component {
   constructor(props) {
-    super()
+    super();
+    console.log(props)
   }
   render() {
     return (
@@ -14,7 +16,7 @@ class Footer extends Component {
           <div className="row">
             <section className="4u 12u(mobile)">
               <header>
-                <h2 className="icon fa-twitter circled">
+                <h2 className="icon fa-facebook circled">
                   <span className="label">Tweets</span>
                 </h2>
               </header>
@@ -48,69 +50,8 @@ class Footer extends Component {
                 </li>
               </ul>
             </section>
-            {/* // Posts */}
-            <section className="4u 12u(mobile)">
-              <header>
-                <h2 className="icon fa-file circled">
-                  <span className="label">Posts</span>
-                </h2>
-              </header>
-              <ul className="divided">
-                <li>
-                  <article className="post stub">
-                    <header>
-                      <h3>
-                        <a href="#">Nisl fermentum integer</a>
-                      </h3>
-                    </header>
-                    <span className="timestamp">3 hours ago</span>
-                  </article>
-                </li>
-                <li>
-                  <article className="post stub">
-                    <header>
-                      <h3>
-                        <a href="#">Phasellus portitor lorem</a>
-                      </h3>
-                    </header>
-                    <span className="timestamp">6 hours ago</span>
-                  </article>
-                </li>
-                <li>
-                  <article className="post stub">
-                    <header>
-                      <h3>
-                        <a href="#">Magna tempus consequat</a>
-                      </h3>
-                    </header>
-                    <span className="timestamp">Yesterday</span>
-                  </article>
-                </li>
-                <li>
-                  <article className="post stub">
-                    <header>
-                      <h3>
-                        <a href="#">Feugiat lorem ipsum</a>
-                      </h3>
-                    </header>
-                    <span className="timestamp">2 days ago</span>
-                  </article>
-                </li>
-              </ul>
-            </section>
-            {/* // Photos */}
-            <section className="4u 12u(mobile)">
-              <header>
-                <h2 className="icon fa-camera circled">
-                  <span className="label">Photos</span>
-                </h2>
-              </header>
-              <div className="row 25%">
-              {this.props.config.galleryItems.map((item, i) => {
-                return <FooterGallery image={item.image} key={i}/>
-              })}
-              </div>
-            </section>
+            <FooterOpinions />
+            <FooterGallery items={this.props.config.galleryItems} />
           </div>
           <hr />
           <div className="row">
@@ -118,18 +59,10 @@ class Footer extends Component {
               {/* // Contact */}
               <section className="contact">
                 <header>
-                  <h3>Nisl turpis nascetur interdum?</h3>
+                  <h3>Zainteresowni naszą oferą?</h3>
                 </header>
-                <p>
-                  Urna nisl non quis interdum mus ornare ridiculus egestas
-                  ridiculus lobortis vivamus tempor aliquet.
-                </p>
+                <p>Śledź nas na portalach społecznościowych</p>
                 <ul className="icons">
-                  <li>
-                    <a href="#" className="icon fa-twitter">
-                      <span className="label">Twitter</span>
-                    </a>
-                  </li>
                   <li>
                     <a href="#" className="icon fa-facebook">
                       <span className="label">Facebook</span>
@@ -143,16 +76,6 @@ class Footer extends Component {
                   <li>
                     <a href="#" className="icon fa-pinterest">
                       <span className="label">Pinterest</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="icon fa-dribbble">
-                      <span className="label">Dribbble</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="icon fa-linkedin">
-                      <span className="label">Linkedin</span>
                     </a>
                   </li>
                 </ul>

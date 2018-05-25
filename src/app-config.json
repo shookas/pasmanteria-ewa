@@ -4,41 +4,41 @@
             {
                 "header": "this is header section",
                 "text": "text from config",
-                "image": "images/pic01.jpg"
+                "src": "images/pic01.jpg"
               },
               {
                 "header": "this is header section",
                 "text": "text from config",
-                "image": "images/pic02.jpg"
+                "src": "images/pic02.jpg"
               },
               {
                 "header": "this is header section",
                 "text": "text from config",
-                "image": "images/pic03.jpg"
+                "src": "images/pic03.jpg"
               },
               {
                 "header": "this is header section",
                 "text": "text from config",
-                "image": "images/pic04.jpg"
+                "src": "images/pic04.jpg"
               },
               {
                 "header": "this is header section",
                 "text": "text from config",
-                "image": "images/pic05.jpg"
+                "src": "images/pic05.jpg"
               },
               {
                 "header": "this is header section",
                 "text": "text from config",
-                "image": "images/pic01.jpg"
+                "arc": "images/pic01.jpg"
               }
         ]
     },
     "footerConfig": {
         "galleryItems": [
-          {"image": "images/pic01.jpg"},
-          {"image": "images/pic02.jpg"},
-          {"image": "images/pic03.jpg"},
-          {"image": "images/pic04.jpg"}
+          {"src": "images/pic01.jpg"},
+          {"src": "images/pic02.jpg"},
+          {"src": "images/pic03.jpg"},
+          {"src": "images/pic04.jpg"}
         ]
     }
 }

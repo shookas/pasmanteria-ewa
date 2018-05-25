@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Viewer from 'react-viewer';
+import FooterGalleryItem from './FooterGalleryItem';
 
 export default class FooterGallery extends Component {
   constructor(props) {
@@ -8,34 +9,45 @@ export default class FooterGallery extends Component {
       visible: false
     };
   }
+
+  viewItem(itemIndex) {
+    this.setState({ visible: true, active: itemIndex });
+  }
+
   render() {
     return (
-      <div className="6u">
-        <a
-          className="image fit"
-          onClick={() => {
-            this.setState({ visible: !this.state.visible });
-          }}
-        >
-          <img src={this.props.image} alt={this.props.image} />
-        </a>
+      <section className="4u 12u(mobile)">
+        <header>
+          <h2 className="icon fa-camera circled">
+            <span className="label">Photos</span>
+          </h2>
+        </header>
+        <div className="row 25%">
+          {this.props.items.map((item, i) => {
+            return (
+              <FooterGalleryItem
+                image={item.src}
+                key={i}
+                index={i}
+                view={this.viewItem.bind(this)}
+              />
+            );
+          })}
+        </div>
         <Viewer
           visible={this.state.visible}
           onClose={() => {
             this.setState({ visible: false });
           }}
-          images={[{ src: this.props.image, alt: this.props.image }]}
+          images={this.props.items}
+          activeIndex={this.state.active}
           rotatable={false}
           scalable={false}
-          zoomable={false}
-          changeable={false}
           onMaskClick={() => {
             this.setState({ visible: false });
           }}
-          noNavbar={true}
-          noToolbar={true}
         />
-      </div>
+      </section>
     );
   }
 }
