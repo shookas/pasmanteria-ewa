@@ -5,5 +5,7 @@ import './responsiveness.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const config = require('./app-config.json');
+
+ReactDOM.render(<App config={config}/>, document.getElementById('root'));
 registerServiceWorker();

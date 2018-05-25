@@ -7,12 +7,15 @@ import Main from '../Main/Main';
 import Features from '../Features/Features';
 
 class PageMain extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
       <div>
         <Baner />
-        <Carousel />
+        <Carousel items={this.props.config.carouselItems} />
         <Main />
         <Features />
       </div>

@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import './Footer.scss';
 
+import FooterGallery from './FooterGallery/FooterGallery';
+
 class Footer extends Component {
+  constructor(props) {
+    super()
+  }
   render() {
     return (
       <div id="footer">
@@ -101,36 +106,9 @@ class Footer extends Component {
                 </h2>
               </header>
               <div className="row 25%">
-                <div className="6u">
-                  <a href="#" className="image fit">
-                    <img src="images/pic10.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="6u">
-                  <a href="#" className="image fit">
-                    <img src="images/pic11.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="6u">
-                  <a href="#" className="image fit">
-                    <img src="images/pic12.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="6u">
-                  <a href="#" className="image fit">
-                    <img src="images/pic13.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="6u">
-                  <a href="#" className="image fit">
-                    <img src="images/pic14.jpg" alt="" />
-                  </a>
-                </div>
-                <div className="6u">
-                  <a href="#" className="image fit">
-                    <img src="images/pic15.jpg" alt="" />
-                  </a>
-                </div>
+              {this.props.config.galleryItems.map((item, i) => {
+                return <FooterGallery image={item.image} key={i}/>
+              })}
               </div>
             </section>
           </div>

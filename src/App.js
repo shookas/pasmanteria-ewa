@@ -11,6 +11,9 @@ import jQuery from 'jquery';
 window.$ = window.jQuery = jQuery;
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   componentDidMount() {
     require('./libs/jquery.dropotron.min.js');
@@ -71,14 +74,18 @@ class App extends Component {
     })(window.jQuery);
   }
 
+  giveMeProps() {
+    return {a: 'a'};
+  }
+
   render() {
     return (
       <Router>
         <div id="page-wrapper">
           <Header />
-          <Route exact path="/" component={PageMain} />
+          <Route exact path="/" render={() => <PageMain config={this.props.config.mainPageConfig} />} />
           <Route path="/contact" component={PageContact} />
-          <Footer />
+          <Footer config={this.props.config.footerConfig}/>
         </div>
       </Router>
     );

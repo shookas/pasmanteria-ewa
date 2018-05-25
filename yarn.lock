@@ -1453,6 +1453,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.5:
+  version "2.2.5"
+  resolved "http://91.227.21.66:8081/repository/npm-group/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
 clean-css@4.1.x:
   version "4.1.11"
   resolved "http://91.227.21.66:8081/repository/npm-group/clean-css/-/clean-css-4.1.11.tgz#2ecdf145aba38f54740f26cefd0ff3e03e125d6a"
@@ -5825,6 +5829,12 @@ react-router@^4.2.0:
     path-to-regexp "^1.7.0"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-viewer@^2.4.0:
+  version "2.4.0"
+  resolved "http://91.227.21.66:8081/repository/npm-group/react-viewer/-/react-viewer-2.4.0.tgz#1ad102a192b286b3ec8ec63ba904d88ff179e764"
+  dependencies:
+    classnames "^2.2.5"
 
 react@^16.3.2:
   version "16.3.2"

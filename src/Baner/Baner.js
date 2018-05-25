@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Baner.scss';
 
 class Baner extends Component {
@@ -7,13 +8,12 @@ class Baner extends Component {
       <section id="banner">
         <header>
           <h2>
-            Hi. You're looking at <strong>Helios</strong>.
+            Zapraszamy do <strong>Pasmenterii Ewa</strong>.
           </h2>
           <p>
-            A (free) responsive site template by{' '}
-            <a href="http://html5up.net">HTML5 UP</a>. Built on{' '}
-            <strong>skel</strong> and released under the{' '}
-            <a href="http://html5up.net/license">CCA</a> license.
+            Zachęcamy do zapoznania się z naszą ofertą {' '}
+            <Link to="/offer">OFERTĄ</Link>. <br></br>
+            Posiadamy duży asortyment i na pewno znajdziesz coś dla siebie.
           </p>
         </header>
       </section>
