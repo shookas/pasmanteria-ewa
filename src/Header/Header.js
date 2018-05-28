@@ -8,14 +8,14 @@ class Header extends Component {
   }
 
   componentDidUpdate() {
-    if (this.props.isMainPage) {
-      this.addScrolly();
-    }
+    this.addScrolly();
   }
 
   addScrolly() {
-    require('../libs/jquery.scrolly.min.js');
-    window.$('.scrolly').scrolly();
+    if (this.props.isMainPage) {
+      require('../libs/jquery.scrolly.min.js');
+      window.$('.scrolly').scrolly();
+    }
   }
 
   showFooter() {
