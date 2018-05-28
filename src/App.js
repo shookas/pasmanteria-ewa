@@ -7,6 +7,7 @@ import PageOffer from './PageOffer/PageOffer';
 import Header from './Header/Header';
 import TopMenu from './TopMenu/TopMenu';
 import Footer from './Footer/Footer';
+import MoveToTop from './MoveToTop/MoveToTop';
 import './App.scss';
 
 import jQuery from 'jquery';
@@ -52,6 +53,7 @@ class App extends Component {
         />
         <Route path="/oferta" component={PageOffer} />
         <Route path="/kontakt" component={PageContact} />
+        <MoveToTop />
         <Footer config={this.props.config.footerConfig} />
       </div>
     );

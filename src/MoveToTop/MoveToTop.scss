@@ -1,0 +1,28 @@
+@import '../styles/libs/_vars.scss';
+$button-size: 4.5em;
+
+.move-to-top {
+    height: $button-size;
+    width: $button-size;
+    line-height: $button-size;
+    border-radius: $button-size / 2;
+    background-color: $primary-color;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: -2px 2px 24px 0px rgba(0,0,0,0.75);
+    transition: box-shadow 0.35s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        box-shadow: -2px 2px 30px 5px rgba(0,0,0,0.75);
+    }
+
+    * {
+        color: #fff;
+    }
+}
