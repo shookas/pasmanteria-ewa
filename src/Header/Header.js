@@ -4,31 +4,41 @@ import './Header.scss';
 
 class Header extends Component {
   componentDidMount() {
-    require('../libs/jquery.scrolly.min.js');
-    // Scrolly links.
-    const $ = window.$;
-    $('.scrolly').scrolly();
-    console.log('header did mount')
+    this.addScrolly();
   }
 
   componentDidUpdate() {
-    console.log('header did update')
+    if (this.props.isMainPage) {
+      this.addScrolly();
+    }
   }
 
-  componentWillMount() {
-    console.log('header will mount')
+  addScrolly() {
+    require('../libs/jquery.scrolly.min.js');
+    window.$('.scrolly').scrolly();
   }
 
-  componentWillUpdate() {
-    console.log('header will update')
+  showFooter() {
+    if (this.props.isMainPage) {
+      return (
+        <footer>
+          <a href="#banner" className="button circled scrolly">
+            <i className="icon fa-angle-double-down fa-2x" />
+          </a>
+        </footer>
+      );
+    }
   }
 
-  shouldComponentUpdate() {
-    console.log('header should update')
-  }
-
-  componentWillReceiveProps() {
-    console.log('header will receive props')
+  showDescription() {
+    if (this.props.isMainPage) {
+      return (
+        <div>
+          <hr />
+          <p className="description">U nas znajdziesz czego potrzebujesz</p>
+        </div>
+      );
+    }
   }
 
   render() {
@@ -40,14 +50,9 @@ class Header extends Component {
               Pasmanteria Ewa (Logo)
             </a>
           </h1>
-          <hr />
-          <p>U nas znajdziesz czego potrzebujesz</p>
+          {this.showDescription()}
         </header>
-        <footer>
-          <a href="#banner" className="button circled scrolly">
-            <i className="icon fa-angle-double-down fa-2x" />
-          </a>
-        </footer>
+        {this.showFooter()}
       </div>
     );
   }

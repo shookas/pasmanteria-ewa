@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, withRouter } from 'react-router-dom';
 
 import PageMain from './PageMain/PageMain';
 import PageContact from './PageContact/PageContact';
@@ -12,9 +12,12 @@ import './App.scss';
 import jQuery from 'jquery';
 window.$ = window.jQuery = jQuery;
 
+// @withRouter
 class App extends Component {
+  fullBaner = 'dupa';
+
   constructor(props) {
-    super();
+    super(props);
   }
 
   componentDidMount() {
@@ -31,28 +34,28 @@ class App extends Component {
     });
   }
 
+  isMainPage() {
+    return this.props.location.pathname === '/';
+  }
+
   render() {
     return (
-      <Router>
-        <div id="page-wrapper">
-          <div id="header">
-            <TopMenu />
-            <Header />
-          </div>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <PageMain config={this.props.config.mainPageConfig} />
-            )}
-          />
-          <Route path="/oferta" component={PageOffer} />
-          <Route path="/kontakt" component={PageContact} />
-          <Footer config={this.props.config.footerConfig} />
+      <div id="page-wrapper">
+        <div id="header" className={this.isMainPage() ? 'full-height' : ''}>
+          <TopMenu />
+          <Header isMainPage={this.isMainPage()} />
         </div>
-      </Router>
+        <Route
+          exact
+          path="/"
+          render={() => <PageMain config={this.props.config.mainPageConfig} />}
+        />
+        <Route path="/oferta" component={PageOffer} />
+        <Route path="/kontakt" component={PageContact} />
+        <Footer config={this.props.config.footerConfig} />
+      </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

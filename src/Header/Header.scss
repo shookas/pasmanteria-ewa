@@ -1,7 +1,11 @@
 body {
   #header {
-    height: 100vh;
-    min-height: 40em;
+    height: 30vh;
+    transition: height 0.35s ease-in-out;
+
+    &.full-height {
+      height: 100vh;
+    }
 
     h1 {
       font-size: 4em;
@@ -44,6 +48,8 @@ body {
   padding: 7.5em 0 2em 0;
   cursor: default;
 
+ 
+
   &:before {
     content: '';
     display: inline-block;
@@ -62,9 +68,10 @@ body {
   header {
     display: inline-block;
 
-    > p {
+    & .description {
       font-size: 1.25em;
       margin: 0;
+      text-align: center;
     }
   }
 
