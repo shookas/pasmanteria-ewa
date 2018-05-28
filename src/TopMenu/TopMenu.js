@@ -1,40 +1,33 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './TopMenu.scss';
 
 export default class TopMenu extends Component {
   render() {
     return (
+      
         <nav id="nav">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink exact={true} to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/oferta">Oferta</Link>
-              <ul>
+              <NavLink to="/oferta">Oferta</NavLink>
+              <ul className="dropdown">
                 <li>
-                  <a href="#">Artykuły pasmanteryjne</a>
+                  <NavLink to="/oferta/artykuly_pasmanteryjne">Artykuły pasmanteryjne</NavLink>
                 </li>
                 <li>
-                  <a href="#">Punkt przyjęć czyszczenia odzieży</a>
+                  <NavLink to="/oferta/czyszczenie">Punkt przyjęć czyszczenia odzieży</NavLink>
                 </li>
                 <li>
-                  <a href="#">Artykuły sezonowe</a>
-                  <ul>
-                    <li>
-                      <a href="#">Galanteria</a>
-                    </li>
-                    <li>
-                      <a href="#">Parasole</a>
-                    </li>
-                  </ul>
+                  <NavLink to="/oferta/artykuly_sezonowe">Artykuły sezonowe</NavLink>
                 </li>
               </ul>
             </li>
             <li>
-              <Link to="/kontakt">Kontakt</Link>
+              <NavLink to="/kontakt">Kontakt</NavLink>
             </li>
           </ul>
         </nav>

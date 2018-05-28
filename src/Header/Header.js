@@ -8,6 +8,27 @@ class Header extends Component {
     // Scrolly links.
     const $ = window.$;
     $('.scrolly').scrolly();
+    console.log('header did mount')
+  }
+
+  componentDidUpdate() {
+    console.log('header did update')
+  }
+
+  componentWillMount() {
+    console.log('header will mount')
+  }
+
+  componentWillUpdate() {
+    console.log('header will update')
+  }
+
+  shouldComponentUpdate() {
+    console.log('header should update')
+  }
+
+  componentWillReceiveProps() {
+    console.log('header will receive props')
   }
 
   render() {

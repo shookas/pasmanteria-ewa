@@ -37,14 +37,6 @@ class App extends Component {
         // Fix: Placeholder polyfill.
         $('form').placeholder();
 
-        // Dropdowns.
-        $('#nav > ul').dropotron({
-          mode: 'fade',
-          speed: 350,
-          noOpenerFade: true,
-          alignment: 'center'
-        });
-
         // Off-Canvas Navigation.
 
         // Navigation Button.
@@ -76,10 +68,6 @@ class App extends Component {
     })(window.jQuery);
   }
 
-  giveMeProps() {
-    return { a: 'a' };
-  }
-
   render() {
     return (
       <Router>
@@ -96,7 +84,7 @@ class App extends Component {
             )}
           />
           <Route path="/oferta" component={PageOffer} />
-          <Route path="/kontakt" component={PageContact} />
+          <Route path="/kontakt" component={PageContact} />      
           <Footer config={this.props.config.footerConfig} />
         </div>
       </Router>
