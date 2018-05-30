@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import MainOffer from './MainOffer.js';
+import SezonOffer from './SezonOffer';
+import PasOffer from './PasOffer';
+import CleanOffer from './CleanOffer';
 import './PageOffer.scss';
 
 class PageOffer extends Component {
@@ -9,11 +13,11 @@ class PageOffer extends Component {
 
   render() {
     return (
-      <div class="wrapper style1">
-        <div class="container">
-          <div class="row 200%">
-            <div class="4u 12u(mobile)" id="sidebar">
-              <hr class="first" />
+      <div className="wrapper style1">
+        <div className="container">
+          <div className="row 200%">
+            <div className="4u 12u(mobile)" id="sidebar">
+              <hr className="first" />
               <section>
                 <header>
                   <h3>
@@ -27,7 +31,7 @@ class PageOffer extends Component {
                   prosimy o kontakt. Istnieje możliwość zamówienia produktu.
                 </p>
                 <footer>
-                  <Link to="/kontakt" class="button">
+                  <Link to="/kontakt" className="button">
                     Kontakt
                   </Link>
                 </footer>
@@ -39,64 +43,51 @@ class PageOffer extends Component {
                     <Link to="/oferta">Oferta</Link>
                   </h3>
                 </header>
-                <p>Zapraszamy do zapoznania się z naszą ofertą <br />
-                Honorujemy płątność kartą
+                <p>
+                  Zapraszamy do zapoznania się z naszą ofertą <br />
+                  Honorujemy płątność kartą
                 </p>
-                <div class="row 50%">
-                  <div class="4u">
-                    <Link to="" class="image fit">
-                      <img src="images/art_pas.jpg" alt="" />
+                <div className="row 50%">
+                  <div className="4u">
+                    <Link to="/oferta/artykuly_pasmanteryjne" className="image fit">
+                      <img src="/images/art_pas.jpg" alt="" />
                     </Link>
                   </div>
-                  <div class="8u">
+                  <div className="8u">
                     <h4>Artykuły pasmanteryjne</h4>
-                    <Link to="">Więcej</Link>
+                    <Link to="/oferta/artykuly_pasmanteryjne">Więcej</Link>
                   </div>
                 </div>
-                <div class="row 50%">
-                  <div class="4u">
-                    <Link to="" class="image fit">
-                      <img src="images/art_clean.jpg" alt="" />
+                <div className="row 50%">
+                  <div className="4u">
+                    <Link to="/oferta/czyszczenie" className="image fit">
+                      <img src="/images/art_clean.jpg" alt="" />
                     </Link>
                   </div>
-                  <div class="8u">
+                  <div className="8u">
                     <h4>Punkt przyjęć czyszczenia odzieży</h4>
-                    <Link to="">Więcej</Link>
+                    <Link to="/oferta/czyszczenie">Więcej</Link>
                   </div>
                 </div>
-                <div class="row 50%">
-                  <div class="4u">
-                    <Link to="" class="image fit">
-                      <img src="images/art_sez.jpg" alt="" />
+                <div className="row 50%">
+                  <div className="4u">
+                    <Link to="/oferta/artykuly_sezonowe" className="image fit">
+                      <img src="/images/art_sez.jpg" alt="" />
                     </Link>
                   </div>
-                  <div class="8u">
+                  <div className="8u">
                     <h4>Artykuły sezonowe</h4>
-                    <Link to="">Więcej</Link>
+                    <Link to="/oferta/artykuly_sezonowe">Więcej</Link>
                   </div>
                 </div>
               </section>
             </div>
-            <div class="8u 12u(mobile) important(mobile)" id="content">
+            <div className="8u 12u(mobile) important(mobile)" id="content">
               <article id="main">
-                <header>
-                  <h2>Pasmanteria Ewa</h2>
-                  <p>U nas znajdziesz czego potrzebujesz</p>
-                </header>
-                <a href="#" class="image featured">
-                  <img src="images/pic_main.jpg" alt="" />
-                </a>
-                <p>
-                  Oferujemy cały zakres dodatków krawieckich, przyborów do
-                  szycia, haftowania, przeróbek, naprawy odzieży. Gwarantujemy
-                  miłą i fachową obsługę i zawsze chętnie doradzimy i wykonamy
-                  bezpłatnie drobne naprawy np. wymiana suwaków w zamkach do
-                  kurtek, torebek itp. Ponadto oferujemy również sprzedaż
-                  polskich parasoli firmy "Kulik" z Wrocławia z roczną
-                  gwarancją. W sezonie zimowym duży wybór beretów, czapek,
-                  rękawiczek i szali, natomiast wiosną i latem cienkie szale,
-                  bawełniane chusteczki na głowę oraz parea na stroje kąpielowe.
-                </p>
+                <Route path="/oferta/czyszczenie" component={CleanOffer} />
+                <Route path="/oferta/artykuly_pasmanteryjne" component={PasOffer} />
+                <Route path="/oferta/artykuly_sezonowe" component={SezonOffer} />
+                <Route path="/oferta" exact component={MainOffer} />
                 <h5>Istnieje możliwość płacenia kartą płatniczą</h5>
               </article>
             </div>
