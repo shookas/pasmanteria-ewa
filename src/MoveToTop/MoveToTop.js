@@ -1,36 +1,53 @@
 import React, { Component } from 'react';
 import './MoveToTop.scss';
+import SmoothScroll from '../Helpers/SmoothScroll';
 
 export default class MoveToTop extends Component {
+  showButtonThreshold = 1500;
+
   constructor(props) {
     super();
   }
 
   componentDidMount() {
-    window.onscroll = function() {
-      scrollFunction();
+    this.moveToTopButton = window.document.querySelector('.move-to-top');
+    window.onscroll = () => {
+      this.scrollFunction();
     };
-
-    function scrollFunction() {
-      if (
-        window.document.body.scrollTop > 1500 ||
-        window.document.documentElement.scrollTop > 1500
-      ) {
-        window.document.querySelector('.move-to-top').style.display = 'flex';
-      } else {
-        window.document.querySelector('.move-to-top').style.display = 'none';
-      }
+    if (!this.showButton()) {
+      this.moveToTopButton.style.display = 'none';
     }
   }
 
-  onClick() {
-    window.document.body.scrollTop = 0; // For Safari
-    window.document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  scrollFunction() {
+    if (this.showButton()) {
+      this.moveToTopButton.style.display = 'flex';
+    } else {
+      this.moveToTopButton.style.display = 'none';
+    }
+  }
+
+  showButton() {
+    return (
+      window.document.body.scrollTop > this.showButtonThreshold ||
+      window.document.documentElement.scrollTop > this.showButtonThreshold
+    );
+  }
+
+  smoothScroll() {
+    new SmoothScroll().scrollIt(
+      document.querySelector('body'),
+      500,
+      'easeInOutCubic'
+    );
   }
 
   render() {
     return (
-      <div className="move-to-top" onClick={this.onClick.bind(this)}>
+      <div
+        className="button circled move-to-top"
+        onClick={this.smoothScroll.bind(this)}
+      >
         <i className="icon fa-arrow-up fa-2x" />
       </div>
     );

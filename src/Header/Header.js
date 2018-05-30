@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SmoothScroll from '../Helpers/SmoothScroll';
 
 import './Header.scss';
 
@@ -13,8 +14,13 @@ class Header extends Component {
 
   addScrolly() {
     if (this.props.isMainPage) {
-      require('../libs/jquery.scrolly.min.js');
-      window.$('.scrolly').scrolly();
+      document.querySelector('.scrolly').addEventListener('click', () => {
+        new SmoothScroll().scrollIt(
+          document.querySelector('#banner'),
+          500,
+          'easeInOutCubic'
+        );
+      });
     }
   }
 
@@ -22,7 +28,7 @@ class Header extends Component {
     if (this.props.isMainPage) {
       return (
         <footer>
-          <a href="#banner" className="button circled scrolly">
+          <a className="button circled scrolly">
             <i className="icon fa-angle-double-down fa-2x" />
           </a>
         </footer>
