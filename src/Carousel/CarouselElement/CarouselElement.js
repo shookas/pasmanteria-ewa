@@ -11,6 +11,7 @@ export default class CarouselElement extends Component {
       <article>
         <a className="image featured">
           <img
+          // style={{height: '300px'}}
             src={this.props.image}
             alt={this.props.image}
             onClick={() => this.props.view(this.props.index)}

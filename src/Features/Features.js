@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Features.scss';
 
 class Features extends Component {
@@ -12,12 +14,12 @@ class Features extends Component {
           </header>
           <div className="row">
             <article className="4u 12u(mobile) special">
-              <a className="image featured">
-                <img src="images/pic07.jpg" alt="" />
-              </a>
+              <Link to="/oferta" className="image featured">
+                <img src="images/art_pas.jpg" alt="" />
+              </Link>
               <header>
                 <h3>
-                  <a >Artykuły pasmanteryjne</a>
+                  <Link to="/oferta" >Artykuły pasmanteryjne</Link>
                 </h3>
               </header>
               <p>
@@ -25,12 +27,12 @@ class Features extends Component {
               </p>
             </article>
             <article className="4u 12u(mobile) special">
-              <a className="image featured">
-                <img src="images/pic08.jpg" alt="" />
-              </a>
+              <Link to="/oferta" className="image featured">
+                <img src="images/art_sez.jpg" alt="" />
+              </Link>
               <header>
                 <h3>
-                  <a>Artykuły sezownowe</a>
+                  <Link to="/oferta">Artykuły sezownowe</Link>
                 </h3>
               </header>
               <p>
@@ -38,12 +40,12 @@ class Features extends Component {
               </p>
             </article>
             <article className="4u 12u(mobile) special">
-              <a className="image featured">
-                <img src="images/pic09.jpg" alt="" />
-              </a>
+              <Link to="/oferta" className="image featured">
+                <img src="images/art_clean.jpg" alt="" />
+              </Link>
               <header>
                 <h3>
-                  <a>Punkt przyjęć czyszczenia odzieży</a>
+                  <Link to="/oferta">Punkt przyjęć czyszczenia odzieży</Link>
                 </h3>
               </header>
               <p>

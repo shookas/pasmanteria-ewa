@@ -11,9 +11,7 @@ export default class MoveToTop extends Component {
 
   componentDidMount() {
     this.moveToTopButton = window.document.querySelector('.move-to-top');
-    window.onscroll = () => {
-      this.scrollFunction();
-    };
+    window.onscroll = this.scrollFunction.bind(this);
     if (!this.showButton()) {
       this.moveToTopButton.style.display = 'none';
     }

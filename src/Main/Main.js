@@ -7,7 +7,7 @@ class Main extends Component {
     return (
       <div className="wrapper style2">
         <article id="main" className="container special">
-            <img className="image featured" src="images/pic06.jpg" alt="" />
+            <img className="image featured" src="images/pic_main.jpg" alt="" />
           <header>
             <h2>
               <a>Pasmanteria Ewa</a>

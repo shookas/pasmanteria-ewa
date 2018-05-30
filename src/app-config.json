@@ -2,43 +2,45 @@
     "mainPageConfig": {
         "carouselItems": [
             {
-                "header": "this is header section",
-                "text": "text from config",
-                "src": "images/pic01.jpg"
+                "header": "Sznury i materiały",
+                "text": "Mamy w ofercie różne materiały i sznury",
+                "src": "images/slider/1.jpg"
               },
               {
-                "header": "this is header section",
-                "text": "text from config",
-                "src": "images/pic02.jpg"
+                "header": "Przybory krawieckie",
+                "text": "Wspieramy poradą i doborem właściwych przyborów krawieckich",
+                "src": "images/slider/2.jpg"
               },
               {
-                "header": "this is header section",
-                "text": "text from config",
-                "src": "images/pic03.jpg"
+                "header": "Guziki",
+                "text": "Zapraszamy do zapoznania się z naszą ofertą guzików",
+                "src": "images/slider/3.jpg"
               },
               {
-                "header": "this is header section",
-                "text": "text from config",
-                "src": "images/pic04.jpg"
+                "header": "Igły i nici",
+                "text": "Posiadamy igły i nici renomowanych marek",
+                "src": "images/slider/4.jpg"
               },
               {
-                "header": "this is header section",
-                "text": "text from config",
-                "src": "images/pic05.jpg"
+                "header": "Muliny",
+                "text": "U nas dobierzesz pasujący kolor do swoich potrzeb",
+                "src": "images/slider/5.jpg"
               },
               {
-                "header": "this is header section",
-                "text": "text from config",
-                "arc": "images/pic01.jpg"
+                "header": "Włóczki",
+                "text": "Bogata kolorystyka włóczek",
+                "src": "images/slider/6.jpg"
               }
         ]
     },
     "footerConfig": {
         "galleryItems": [
-          {"src": "images/pic01.jpg"},
-          {"src": "images/pic02.jpg"},
-          {"src": "images/pic03.jpg"},
-          {"src": "images/pic04.jpg"}
+          {"src": "images/gallery/1.jpg"},
+          {"src": "images/gallery/2.jpg"},
+          {"src": "images/gallery/3.jpg"},
+          {"src": "images/gallery/4.jpg"},
+          {"src": "images/gallery/5.jpg"},
+          {"src": "images/gallery/6.jpg"}
         ]
     }
 }

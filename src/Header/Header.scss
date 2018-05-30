@@ -48,7 +48,10 @@ body {
   padding: 7.5em 0 2em 0;
   cursor: default;
 
- 
+  #logo {
+    width: 700px;
+    height: auto;
+  }
 
   &:before {
     content: '';

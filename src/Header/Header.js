@@ -52,9 +52,7 @@ class Header extends Component {
       <div className="inner">
         <header>
           <h1>
-            <a href="index.html" id="logo">
-              Pasmanteria Ewa (Logo)
-            </a>
+            <img id="logo" src="/images/logo.png" />
           </h1>
           {this.showDescription()}
         </header>
