@@ -318,7 +318,7 @@
     }
   
     #navButton {
-      @include vendor('backface-visibility', 'hidden');
+      backface-visibility: hidden;
       @include vendor('transition', 'transform #{_duration(navPanel)} ease');
       display: block;
       height: 44px;
@@ -368,7 +368,7 @@
       @include vendor('transform', 'translateY(#{_size(navPanel) * -1})');
       @include vendor('transition', ('transform #{_duration(navPanel)} ease'));
       display: block;
-      height: _size(navPanel);
+      height: _size(navPanel) * 2;
       left: 0;
       overflow-y: auto;
       position: fixed;
@@ -387,7 +387,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: url('./styles/images/overlay.jpg');
+        // background: url('./styles/images/overlay.jpg');
         background-size: 128px 128px;
       }
   
