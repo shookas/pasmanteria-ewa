@@ -12,6 +12,11 @@
     color: #2b252c;
   }
 
+  .row--spread {
+    display: flex;
+    justify-content: space-between;
+  }
+
   header {
     text-align: center;
     cursor: default;

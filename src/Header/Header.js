@@ -47,12 +47,16 @@ class Header extends Component {
     }
   }
 
+  addFixedPosition() {
+    return !this.props.isMainPage ? 'logo--fixed' : '';
+  }
+
   render() {
     return (
       <div className="inner">
         <header>
           <h1>
-            <img id="logo" src="/images/logo.png" />
+            <img id="logo" className={this.addFixedPosition()} src="/images/logo.png" />
           </h1>
           {this.showDescription()}
         </header>

@@ -16,7 +16,7 @@ export default class FooterGallery extends Component {
 
   render() {
     return (
-      <section className="4u 12u(mobile)">
+      <section className="4u mobile">
         <header>
           <h2 className="icon fa-camera circled">
             <span className="label">Photos</span>

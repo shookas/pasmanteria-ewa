@@ -16,7 +16,7 @@ class PageOffer extends Component {
       <div className="wrapper style1">
         <div className="container">
           <div className="row 200%">
-            <div className="4u 12u(mobile)" id="sidebar">
+            <div className="4u mobile" id="sidebar">
               <hr className="first" />
               <section>
                 <header>
@@ -82,7 +82,7 @@ class PageOffer extends Component {
                 </div>
               </section>
             </div>
-            <div className="8u 12u(mobile) important(mobile)" id="content">
+            <div className="8u mobile important(mobile)" id="content">
               <article id="main">
                 <Route path="/oferta/czyszczenie" component={CleanOffer} />
                 <Route path="/oferta/artykuly_pasmanteryjne" component={PasOffer} />

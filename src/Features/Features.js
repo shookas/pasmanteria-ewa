@@ -13,7 +13,7 @@ class Features extends Component {
             <p>Zapraszamy do zapoznania się z naszymi usługami</p>
           </header>
           <div className="row">
-            <article className="4u 12u(mobile) special">
+            <article className="4u mobile special">
               <Link to="/oferta" className="image featured">
                 <img src="images/art_pas.jpg" alt="" />
               </Link>
@@ -26,7 +26,7 @@ class Features extends Component {
                 Szeroki asortyment artykułów pasmanteryjnych dostosowany do potrzeb naszych klientów.
               </p>
             </article>
-            <article className="4u 12u(mobile) special">
+            <article className="4u mobile special">
               <Link to="/oferta" className="image featured">
                 <img src="images/art_sez.jpg" alt="" />
               </Link>
@@ -39,7 +39,7 @@ class Features extends Component {
                 Sprzedajemy także artykuły sezonowe renomowanych marek.
               </p>
             </article>
-            <article className="4u 12u(mobile) special">
+            <article className="4u mobile special">
               <Link to="/oferta" className="image featured">
                 <img src="images/art_clean.jpg" alt="" />
               </Link>

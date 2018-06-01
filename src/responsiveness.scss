@@ -90,6 +90,10 @@
       padding-left: 2em;
       padding-right: 2em;
     }
+
+    .container {
+      width: 100%;
+    }
   
     /* Header */
   
@@ -97,8 +101,8 @@
       background-attachment: scroll;
   
       .inner {
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
       }
     }
   
@@ -220,6 +224,14 @@
       > p {
         font-size: 1.25em;
       }
+    }
+
+    .mobile {
+      width: 100%;
+    }
+
+    .flex--mobile {
+      flex-direction: column;
     }
   
     /* Image */
@@ -461,6 +473,11 @@
         padding-top: 1.5em;
         padding-left: 1em;
         padding-right: 1em;
+
+        #logo {
+          width: 100% !important;
+          height: auto !important;
+        }
       }
   
       header {

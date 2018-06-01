@@ -13,8 +13,8 @@ class Footer extends Component {
     return (
       <div id="footer">
         <div className="container">
-          <div className="row">
-            <FooterPosts />
+          <div className="row row--spread flex--mobile">
+            {/* <FooterPosts /> */}
             <FooterOpinions />
             <FooterGallery items={this.props.config.galleryItems} />
           </div>

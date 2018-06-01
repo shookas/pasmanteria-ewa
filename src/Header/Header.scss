@@ -51,6 +51,14 @@ body {
   #logo {
     width: 700px;
     height: auto;
+
+    &.logo--fixed {
+      bottom: 86px;
+      height: 20vh;
+      width: auto;
+      min-height: 100px;
+      position: relative;
+    }
   }
 
   &:before {
