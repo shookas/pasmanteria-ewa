@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { FormErrors } from './FormErrors';
 
 class ContactForm extends Component {
   constructor(props) {
     super();
 
-    this.state = {
+    this.initialState = {
       name: '',
       email: '',
       text: '',
@@ -15,6 +18,8 @@ class ContactForm extends Component {
       textValid: false,
       formValid: false
     };
+
+    this.state = this.initialState;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -85,10 +90,26 @@ class ContactForm extends Component {
       name: this.state.name,
       text: this.state.text
     };
+
+    this.toastId = toast.info('Wysyłanie maila...', { autoClose: false });
     axios
       .post(' http://localhost:3001/contact', body)
       .then(response => {
-        
+        toast.update(this.toastId, {
+          render: 'Dziękujemy za wysłanie maila',
+          type: toast.TYPE.SUCCESS,
+          className: 'alert--success',
+          autoClose: 5000
+        });
+        this.setState(this.initialState);
+      })
+      .catch(err => {
+        toast.update(this.toastId, {
+          render: 'Coś poszło nie tak. Spróbuj ponownie',
+          type: toast.TYPE.ERROR,
+          className: 'alert--error',
+          autoClose: 5000
+        });
       });
     event.preventDefault();
   }
@@ -148,6 +169,7 @@ class ContactForm extends Component {
             </button>
           </footer>
         </article>
+        <ToastContainer />
       </div>
     );
   }
