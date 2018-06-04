@@ -91,7 +91,10 @@ class ContactForm extends Component {
       text: this.state.text
     };
 
-    this.toastId = toast.info('Wysyłanie maila...', { autoClose: false });
+    this.toastId = toast.info('Wysyłanie maila...', {
+      autoClose: false,
+      closeButton: false
+    });
     axios
       .post(' http://localhost:3001/contact', body)
       .then(response => {
@@ -99,7 +102,8 @@ class ContactForm extends Component {
           render: 'Dziękujemy za wysłanie maila',
           type: toast.TYPE.SUCCESS,
           className: 'alert--success',
-          autoClose: 5000
+          autoClose: 5000,
+          closeButton: false
         });
         this.setState(this.initialState);
       })
@@ -108,7 +112,8 @@ class ContactForm extends Component {
           render: 'Coś poszło nie tak. Spróbuj ponownie',
           type: toast.TYPE.ERROR,
           className: 'alert--error',
-          autoClose: 5000
+          autoClose: 5000,
+          closeButton: false
         });
       });
     event.preventDefault();
