@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { FormErrors } from './FormErrors';
 
 class ContactForm extends Component {
@@ -79,7 +80,16 @@ class ContactForm extends Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state);
+    const body = {
+      email: this.state.email,
+      name: this.state.name,
+      text: this.state.text
+    };
+    axios
+      .post(' http://localhost:3001/contact', body)
+      .then(response => {
+        
+      });
     event.preventDefault();
   }
 
