@@ -7,7 +7,7 @@ const SezonOffer = () => {
         <h2>Artykuły sezonowe</h2>
         <p>Parasole i galanteria</p>
       </header>
-      <a href="#" className="image featured">
+      <a className="image featured">
         <img src="/images/art_sez.jpg" alt="" />
       </a>
       <p>

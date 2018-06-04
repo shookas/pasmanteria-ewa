@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 import PageMain from './PageMain/PageMain';
 import PageContact from './PageContact/PageContact';
 import PageOffer from './PageOffer/PageOffer';
 import Header from './Header/Header';
 import TopMenu from './TopMenu/TopMenu';
+import RespTopMenu from './RespTopMenu/RespTopMenu';
 import Footer from './Footer/Footer';
 import MoveToTop from './MoveToTop/MoveToTop';
 import './App.scss';
@@ -15,8 +16,6 @@ window.$ = window.jQuery = jQuery;
 
 // @withRouter
 class App extends Component {
-  fullBaner = 'dupa';
-
   constructor(props) {
     super(props);
   }
@@ -42,6 +41,7 @@ class App extends Component {
   render() {
     return (
       <div id="page-wrapper">
+        <RespTopMenu />
         <div id="header" className={this.isMainPage() ? 'full-height' : ''}>
           <TopMenu />
           <Header isMainPage={this.isMainPage()} />

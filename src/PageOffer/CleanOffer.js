@@ -7,7 +7,7 @@ const CleanOffer = () => {
         <h2>Punkt przyjęcia odzieży do czyszczenia</h2>
         <p>Punkt przyjęć firmy NATA</p>
       </header>
-      <a href="#" className="image featured">
+      <a className="image featured">
         <img src="/images/art_clean.jpg" alt="" />
       </a>
       <p>

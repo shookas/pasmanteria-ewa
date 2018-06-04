@@ -3,7 +3,7 @@ import './Footer.scss';
 
 import FooterGallery from './FooterGallery/FooterGallery';
 import FooterOpinions from './FooterOpinions/FooterOpinions';
-import FooterPosts from './FooterPosts/FooterPosts';
+// import FooterPosts from './FooterPosts/FooterPosts';
 
 class Footer extends Component {
   constructor(props) {
@@ -29,17 +29,17 @@ class Footer extends Component {
                 <p>Śledź nas na portalach społecznościowych</p>
                 <ul className="icons">
                   <li>
-                    <a href="https://www.facebook.com/Pasmanteria-Ewa-Szuka%C5%82a-401835093244229" target="_blank" className="icon fa-facebook">
+                    <a href="https://www.facebook.com/Pasmanteria-Ewa-Szuka%C5%82a-401835093244229" target="_blank" rel="noopener noreferrer" className="icon fa-facebook">
                       <span className="label">Facebook</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="icon fa-instagram">
+                    <a className="icon fa-instagram">
                       <span className="label">Instagram</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="icon fa-pinterest">
+                    <a className="icon fa-pinterest">
                       <span className="label">Pinterest</span>
                     </a>
                   </li>
