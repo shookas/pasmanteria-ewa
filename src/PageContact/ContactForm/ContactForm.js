@@ -85,7 +85,7 @@ class ContactForm extends Component {
   }
 
   handleSubmit(event) {
-    const body = {
+    const data = {
       email: this.state.email,
       name: this.state.name,
       text: this.state.text
@@ -96,7 +96,7 @@ class ContactForm extends Component {
       closeButton: false
     });
     axios
-      .post(' http://localhost:3001/contact', body)
+      .post(' http://localhost:3001/contact', data)
       .then(response => {
         toast.update(this.toastId, {
           render: 'Dziękujemy za wysłanie maila',

@@ -13,11 +13,8 @@ const allowCrossDomain = function(req, res, next) {
   next();
 };
 
-app.use(
-  bodyParser.urlencoded({
-    extended: true
-  })
-);
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(allowCrossDomain);
 
 const PORT = process.env.PORT || 3001;
@@ -35,11 +32,14 @@ const mailer = require('nodemailer').createTransport({
 });
 
 app.post('/contact', function(req, res) {
+  const subjectContent = req.body.name
+    ? `${SUBJECT} od ${req.body.name}`
+    : SUBJECT;
   mailer.sendMail(
     {
       from: req.body.email,
       to: [CONTACT_ADDRESS],
-      subject: SUBJECT + req.body.name ? `od ${req.body.name}` : '',
+      subject: subjectContent,
       html: req.body.text || '[No message]'
     },
     function(err, info) {
