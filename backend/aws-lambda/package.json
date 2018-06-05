@@ -1,18 +1,14 @@
 {
-  "name": "backend",
+  "name": "aws-lambda",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index-aws-lambda.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "nodemailer": "^4.6.5",
-    "querystring": "^0.2.0"
+    "nodemailer": "^4.6.5"
   }
 }

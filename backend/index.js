@@ -18,8 +18,8 @@ app.use(bodyParser.json());
 app.use(allowCrossDomain);
 
 const PORT = process.env.PORT || 3001;
-const CONTACT_ADDRESS = 'piotr_szukala@o2.pl';
-const SUBJECT = 'Wiadomość wysłana ze strony www.pasmanteria-poznan.pl';
+const CONTACT_ADDRESS = 'pasmanteria.ewa@gmail.com';
+const SUBJECT = 'Wysłano ze strony www.pasmanteria-poznan.pl';
 
 console.log(`Mail sending backend is running on port ${PORT}`);
 
