@@ -96,7 +96,7 @@ class ContactForm extends Component {
       closeButton: false
     });
     axios
-      .post(' http://localhost:3001/contact', data)
+      .post('https://4d0iufjfh6.execute-api.eu-central-1.amazonaws.com/prod/pasmanteriaEwaEmailSender', data)
       .then(response => {
         toast.update(this.toastId, {
           render: 'Dziękujemy za wysłanie maila',
