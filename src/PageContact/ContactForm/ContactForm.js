@@ -95,8 +95,15 @@ class ContactForm extends Component {
       autoClose: false,
       closeButton: false
     });
+
+    const config = {
+      headers: {
+        'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+      }
+    };
+
     axios
-      .post('https://4d0iufjfh6.execute-api.eu-central-1.amazonaws.com/prod/pasmanteriaEwaEmailSender', data)
+      .post('https://4d0iufjfh6.execute-api.eu-central-1.amazonaws.com/prod/pasmanteriaEwaEmailSender', data, config)
       .then(response => {
         toast.update(this.toastId, {
           render: 'Dziękujemy za wysłanie maila',
