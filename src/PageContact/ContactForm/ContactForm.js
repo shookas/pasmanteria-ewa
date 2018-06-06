@@ -85,6 +85,7 @@ class ContactForm extends Component {
   }
 
   handleSubmit(event) {
+    const url = 'https://4d0iufjfh6.execute-api.eu-central-1.amazonaws.com/prod/pasmanteriaEwaEmailSender';
     const data = {
       email: this.state.email,
       name: this.state.name,
@@ -103,7 +104,7 @@ class ContactForm extends Component {
     };
 
     axios
-      .post('https://4d0iufjfh6.execute-api.eu-central-1.amazonaws.com/prod/pasmanteriaEwaEmailSender', data, config)
+      .post(url, data, config)
       .then(response => {
         toast.update(this.toastId, {
           render: 'Dziękujemy za wysłanie maila',
@@ -123,6 +124,25 @@ class ContactForm extends Component {
           closeButton: false
         });
       });
+
+      // fetch(url, {
+      //   body: JSON.stringify(data), // must match 'Content-Type' header
+      //   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      //   credentials: 'same-origin', // include, same-origin, *omit
+      //   headers: {
+      //     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+      //   },
+      //   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      //   mode: 'cors', // no-cors, cors, *same-origin
+      //   redirect: 'follow', // manual, *follow, error
+      //   referrer: 'no-referrer', // *client, no-referrer
+      // }).then(response => {
+      //   console.log(response);
+      // })
+      // .catch(err => {
+      //   console.log(err)
+      // })
+
     event.preventDefault();
   }
 

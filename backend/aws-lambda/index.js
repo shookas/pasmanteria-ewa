@@ -30,7 +30,15 @@ module.exports.contact = (event, context, callback) => {
         callback(err);
         return;
       }
-      callback(null, { statusCode: 200, body: 'Success!'});
+      const response = {
+        statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
+          "Access-Control-Allow-Credentials" : true // Required for cookies, authorization headers with HTTPS 
+        },
+        body: JSON.stringify({text: 'Success!', request: body})
+      }
+      callback(null, response);
     }
   );
 };
