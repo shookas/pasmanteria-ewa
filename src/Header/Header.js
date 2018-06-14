@@ -41,7 +41,7 @@ class Header extends Component {
       return (
         <div>
           <hr />
-          <p className="description">U nas znajdziesz czego potrzebujesz</p>
+          <p className="description">U nas znajdziesz to czego potrzebujesz</p>
         </div>
       );
     }

@@ -125,24 +125,6 @@ class ContactForm extends Component {
         });
       });
 
-      // fetch(url, {
-      //   body: JSON.stringify(data), // must match 'Content-Type' header
-      //   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      //   credentials: 'same-origin', // include, same-origin, *omit
-      //   headers: {
-      //     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-      //   },
-      //   method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      //   mode: 'cors', // no-cors, cors, *same-origin
-      //   redirect: 'follow', // manual, *follow, error
-      //   referrer: 'no-referrer', // *client, no-referrer
-      // }).then(response => {
-      //   console.log(response);
-      // })
-      // .catch(err => {
-      //   console.log(err)
-      // })
-
     event.preventDefault();
   }
 
@@ -163,18 +145,18 @@ class ContactForm extends Component {
               <input
                 type="text"
                 name="name"
-                placeholder="Podaj swoje imię"
+                placeholder="Podaj dane kontaktowe"
                 value={this.state.name}
                 onChange={this.handleChange}
               />
             </label>
             <label>
-              * email
+              * Email
               <input
                 className={this.errorClass(this.state.formErrors.email)}
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder="Podaj email"
                 value={this.state.email}
                 onChange={this.handleChange}
               />

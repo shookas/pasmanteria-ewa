@@ -8,7 +8,7 @@ class Baner extends Component {
       <section id="banner">
         <header>
           <h2>
-            Zapraszamy do <strong>Pasmenterii Ewa</strong>.
+            Zapraszamy do <strong>Pasmenterii Ewa</strong>
           </h2>
           <p>
             Zachęcamy do zapoznania się z naszą ofertą {' '}
