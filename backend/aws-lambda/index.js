@@ -16,14 +16,15 @@ module.exports.contact = (event, context, callback) => {
   } catch(err) {
      body = event.body;
   }
-  const subjectContent = body.name ? `${SUBJECT} od ${body.name}` : SUBJECT;
+  const subjectContent = body.email ? `${SUBJECT} od ${body.email}` : SUBJECT;
+  const htmlContent = `${body.text} <p>proszę odpisać do mnie:<br>${body.name}<br>${body.email}</p>`
 
   mailer.sendMail(
     {
       from: body.email,
       to: [CONTACT_ADDRESS],
       subject: subjectContent,
-      html: body.text || '[No message]'
+      html: htmlContent
     },
     function(err, info) {
       if (err) {
