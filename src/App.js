@@ -16,10 +16,6 @@ window.$ = window.jQuery = jQuery;
 
 // @withRouter
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     window.jQuery(function() {
       const $window = window.jQuery(window);

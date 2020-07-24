@@ -7,15 +7,15 @@ class MapContainer extends Component {
   state = {
     showingInfoWindow: false,
     activeMarker: {},
-    selectedPlace: {}
+    selectedPlace: {},
   };
 
   onMarkerClick(props, marker, e) {
-    console.log(props)
+    console.log(props);
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
-      showingInfoWindow: true
+      showingInfoWindow: true,
     });
   }
 
@@ -23,23 +23,23 @@ class MapContainer extends Component {
     if (this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
-        activeMarker: null
-      })
+        activeMarker: null,
+      });
     }
-  };
+  }
 
   render() {
     const style = {
       width: '100%',
-      height: '400px'
+      height: '400px',
     };
 
     const position = {
       lat: 52.396103,
-      lng: 16.901238
+      lng: 16.901238,
     };
     return (
-      <div className="map_container">
+      <div className='map_container'>
         <Map
           google={this.props.google}
           style={style}
@@ -61,7 +61,7 @@ class MapContainer extends Component {
             <div>
               <h1>{this.state.selectedPlace.title}</h1>
               <p>Zapraszamy na adres: {this.state.selectedPlace.adress}</p>
-              <img src="images/sklep-male.png"></img>
+              <img alt='mały obrazek sklepu' src='images/sklep-male.png'></img>
             </div>
           </InfoWindow>
         </Map>
@@ -71,5 +71,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo'
+  apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo',
 })(MapContainer);
