@@ -18,7 +18,7 @@ class Main extends Component {
               na ulicy Głogowskiej 67. Między Parkiem Wilsona a Rynkiem
               Łazarskim.
             </p>
-            <p>Czynne w godzinach 10:00 - 18:00 i każdą sobotę od 10:00 do 14:00.</p>
+            <p>Czynne w godzinach 10:00 - 17:00 i każdą sobotę od 10:00 do 14:00.</p>
           </header>
           <p>
             Oferujemy cały zakres dodatków krawieckich, przyborów do szycia,

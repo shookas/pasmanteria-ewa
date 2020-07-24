@@ -1,75 +1,46 @@
 import React, { Component } from 'react';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
 import './Map.scss';
 
-class MapContainer extends Component {
-  state = {
-    showingInfoWindow: false,
-    activeMarker: {},
-    selectedPlace: {},
-  };
+let DefaultIcon = L.icon({
+  iconUrl: icon,
+  shadowUrl: iconShadow,
+  iconAnchor: [12, 41],
+});
 
-  onMarkerClick(props, marker, e) {
-    console.log(props);
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true,
-    });
-  }
+L.Marker.prototype.options.icon = DefaultIcon;
 
-  onMapClicked(props) {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null,
-      });
-    }
+export default class MapContainer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      lat: 52.396265,
+      lng: 16.901282,
+      zoom: 17,
+    };
   }
 
   render() {
-    const style = {
-      width: '100%',
-      height: '400px',
-    };
-
-    const position = {
-      lat: 52.396103,
-      lng: 16.901238,
-    };
+    const position = [this.state.lat, this.state.lng];
     return (
-      <div className='map_container'>
-        <Map
-          google={this.props.google}
-          style={style}
-          zoom={15}
-          initialCenter={position}
-          onClick={this.onMapClicked.bind(this)}
-        >
-          <Marker
-            title={'Pasmanteria Ewa'}
-            adress={'Głogowska 67'}
-            position={position}
-            onClick={this.onMarkerClick.bind(this)}
-          />
-
-          <InfoWindow
-            marker={this.state.activeMarker}
-            visible={this.state.showingInfoWindow}
-          >
-            <div>
-              <h1>{this.state.selectedPlace.title}</h1>
-              <p>Zapraszamy na adres: {this.state.selectedPlace.adress}</p>
-              <img alt='mały obrazek sklepu' src='images/sklep-male.png'></img>
-            </div>
-          </InfoWindow>
-        </Map>
-      </div>
+      <Map center={position} zoom={this.state.zoom}>
+        <TileLayer
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
+        />
+        <Marker position={position}>
+          <Popup>
+           Sklep Pasmateria Ewa 
+           <div>Głogowska 67, 60-739 Poznań</div>  
+          </Popup>
+        </Marker>
+      </Map>
     );
   }
 }
-
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo',
-})(MapContainer);
