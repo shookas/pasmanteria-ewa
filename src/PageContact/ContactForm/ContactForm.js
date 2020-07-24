@@ -138,8 +138,10 @@ class ContactForm extends Component {
               W razie pytań o asortyment lub w celu innej informacji prosimy o
               kontakt.
             </p>
+            Kontakt telefoniczny:
+          <h3>+48 61 865 25 40</h3>
           </header>
-          <form>
+          {/* <form>
             <label>
               Imię
               <input
@@ -181,7 +183,7 @@ class ContactForm extends Component {
             >
               Wyślij
             </button>
-          </footer>
+          </footer> */}
         </article>
         <ToastContainer />
       </div>
