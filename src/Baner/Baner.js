@@ -18,7 +18,7 @@ class Baner extends Component {
           <p>
             ulica Głogowska 67. Między Parkiem Wilsona a Rynkiem Łazarskim.
             <br></br>
-            Czynne w godzinach 10:00 - 17:00 i każdą sobotę od 10:00 do 14:00.
+            Czynne w godzinach 10:00 - 17:00. W sobotę i niedzielę sklep jest nieczynny.
           </p>
         </header>
       </section>

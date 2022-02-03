@@ -17,14 +17,14 @@ window.$ = window.jQuery = jQuery;
 // @withRouter
 class App extends Component {
   componentDidMount() {
-    window.jQuery(function() {
+    window.jQuery(function () {
       const $window = window.jQuery(window);
       const $body = window.jQuery('body');
 
       // Disable animations/transitions until the page has loaded.
       $body.addClass('is-loading');
 
-      $window.on('load', function() {
+      $window.on('load', function () {
         $body.removeClass('is-loading');
       });
     });
@@ -35,6 +35,9 @@ class App extends Component {
   }
 
   render() {
+    if (!this.props.config) {
+      return <></>
+    }
     return (
       <div id="page-wrapper">
         <RespTopMenu />
@@ -50,7 +53,7 @@ class App extends Component {
         <Route path="/oferta" component={PageOffer} />
         <Route path="/kontakt" component={PageContact} />
         <MoveToTop />
-        <Footer config={this.props.config.footerConfig} />
+        <Footer config={this.props.config?.footerConfig} />
       </div>
     );
   }
